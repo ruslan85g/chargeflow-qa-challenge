@@ -1,0 +1,18 @@
+{
+  "name": "chargeflof_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "report": "cucumber-js --format html:cucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.57.0",
+    "ts-node": "^10.9.2"
+  }
+}
