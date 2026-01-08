@@ -6,8 +6,12 @@ setDefaultTimeout(30000);
 let browser;
 
 BeforeAll(async function () {
-  // Run browser once before each test
-  browser = await chromium.launch({ headless: false });
+  // CI=true is automatically set by GitHub Actions
+  const isHeadless = process.env.CI === 'true';
+  
+  browser = await chromium.launch({ 
+    headless: isHeadless 
+  });
 });
 
 Before(async function () {
